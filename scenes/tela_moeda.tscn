@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://brwwee3d0bm35"]
+
+[ext_resource type="PackedScene" uid="uid://bo7seyicm2y87" path="res://scenes/button_casa.tscn" id="1_wpnod"]
+[ext_resource type="Script" path="res://scripts/tela_moeda.gd" id="1_ywxej"]
+[ext_resource type="Texture2D" uid="uid://dsqubwpskyyb8" path="res://arts/moeda00.png" id="2_8583l"]
+[ext_resource type="PackedScene" uid="uid://dwtyd66bwvxxe" path="res://scenes/progress_bar.tscn" id="4_y23so"]
+
+[sub_resource type="Theme" id="Theme_r40s0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nqfcm"]
+font_size = 29
+font_color = Color(0, 0, 0, 1)
+
+[node name="TELA_MOEDA" type="Node2D"]
+script = ExtResource("1_ywxej")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 368.0
+offset_bottom = 655.0
+color = Color(1, 1, 0.776471, 1)
+
+[node name="Button_casa" parent="." instance=ExtResource("1_wpnod")]
+offset_left = 6.00001
+offset_top = 9.00003
+offset_right = 270.0
+offset_bottom = 273.0
+
+[node name="Moeda00" type="Sprite2D" parent="."]
+position = Vector2(175, 179)
+texture = ExtResource("2_8583l")
+
+[node name="Button_jogar" type="Button" parent="."]
+offset_left = 84.0
+offset_top = 341.0
+offset_right = 281.0
+offset_bottom = 408.0
+text = "JOGAR
+"
+
+[node name="ProgressBar" parent="." instance=ExtResource("4_y23so")]
+theme = SubResource("Theme_r40s0")
+
+[node name="Label_resultado" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 471.0
+offset_right = 371.0
+offset_bottom = 511.0
+text = "--RESULTADO--"
+label_settings = SubResource("LabelSettings_nqfcm")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button_jogar" to="." method="_on_button_jogar_pressed"]

@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=3 uid="uid://cm50xl2g80wtd"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_dbjfw"]
+[ext_resource type="Texture2D" uid="uid://duy6nlfxk7f8h" path="res://arts/TREVO.png" id="1_vy2qb"]
+[ext_resource type="Texture2D" uid="uid://dsqubwpskyyb8" path="res://arts/moeda00.png" id="2_whm2i"]
+[ext_resource type="Texture2D" uid="uid://dn5i2my1br7wf" path="res://arts/moeda02.png" id="3_f3mdy"]
+[ext_resource type="Texture2D" uid="uid://b7x58flch368m" path="res://arts/moeda01.png" id="4_gpckl"]
+[ext_resource type="Texture2D" uid="uid://cwwg3n7dqwfm" path="res://arts/dado00.png" id="5_l1iv7"]
+[ext_resource type="Texture2D" uid="uid://dr0btw4fxgriq" path="res://arts/dado02.png" id="6_1qjsi"]
+[ext_resource type="Texture2D" uid="uid://p51wacjyukxe" path="res://arts/dado01.png" id="7_nv10r"]
+[ext_resource type="Texture2D" uid="uid://b7nploduu3bap" path="res://arts/jokenpo00.png" id="8_skdwj"]
+[ext_resource type="Texture2D" uid="uid://dxgpqydupdha8" path="res://arts/jokenpo02.png" id="9_nhyuf"]
+[ext_resource type="Texture2D" uid="uid://bjgr8w8sksoqu" path="res://arts/jokenpo01.png" id="10_48xa6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ew4a7"]
+font_size = 43
+font_color = Color(0, 0, 0, 1)
+
+[node name="MENU" type="Node2D"]
+script = ExtResource("1_dbjfw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 368.0
+offset_bottom = 655.0
+color = Color(1, 1, 0.776471, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 19.0
+offset_top = 126.0
+offset_right = 345.0
+offset_bottom = 486.0
+color = Color(0.999999, 0.996861, 0.676974, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 37.0
+offset_right = 367.0
+offset_bottom = 101.0
+text = "JOGO DA SORTE"
+label_settings = SubResource("LabelSettings_ew4a7")
+
+[node name="Trevo" type="Sprite2D" parent="."]
+position = Vector2(176, 516)
+texture = ExtResource("1_vy2qb")
+
+[node name="TextureButton_caraoucoroa" type="TextureButton" parent="."]
+offset_left = 37.0
+offset_top = 155.0
+offset_right = 293.0
+offset_bottom = 411.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_whm2i")
+texture_pressed = ExtResource("3_f3mdy")
+texture_hover = ExtResource("4_gpckl")
+
+[node name="TextureButton_dado" type="TextureButton" parent="."]
+offset_left = 125.0
+offset_top = 299.0
+offset_right = 381.0
+offset_bottom = 555.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_l1iv7")
+texture_pressed = ExtResource("6_1qjsi")
+texture_hover = ExtResource("7_nv10r")
+
+[node name="TextureButton_pedrapapel" type="TextureButton" parent="."]
+offset_left = 196.0
+offset_top = 154.0
+offset_right = 452.0
+offset_bottom = 410.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_skdwj")
+texture_pressed = ExtResource("9_nhyuf")
+texture_hover = ExtResource("10_48xa6")
+
+[connection signal="pressed" from="TextureButton_caraoucoroa" to="." method="_on_texture_button_caraoucoroa_pressed"]
+[connection signal="pressed" from="TextureButton_dado" to="." method="_on_texture_button_dado_pressed"]
+[connection signal="pressed" from="TextureButton_pedrapapel" to="." method="_on_texture_button_pedrapapel_pressed"]
