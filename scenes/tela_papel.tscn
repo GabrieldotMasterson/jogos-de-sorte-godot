@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bo7seyicm2y87" path="res://scenes/button_casa.tscn" id="1_v8bck"]
 [ext_resource type="Texture2D" uid="uid://b7nploduu3bap" path="res://arts/jokenpo00.png" id="2_8l8cd"]
 [ext_resource type="PackedScene" uid="uid://dwtyd66bwvxxe" path="res://scenes/progress_bar.tscn" id="4_ypc5p"]
-[ext_resource type="Texture2D" uid="uid://cwwg3n7dqwfm" path="res://arts/dado00.png" id="5_ou7x5"]
+[ext_resource type="Texture2D" uid="uid://djag5o3jkma8y" path="res://arts/IMGmao.jpg" id="5_hidl8"]
 
 [sub_resource type="Theme" id="Theme_ajts3"]
 
@@ -55,6 +55,8 @@ label_settings = SubResource("LabelSettings_3ipnm")
 horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(184, 548)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_ou7x5")
+position = Vector2(185.5, 549.5)
+scale = Vector2(2.51563, 2.51563)
+texture = ExtResource("5_hidl8")
+
+[connection signal="pressed" from="Button_jogar" to="." method="_on_button_jogar_pressed"]
