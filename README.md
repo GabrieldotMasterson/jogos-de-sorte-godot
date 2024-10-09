@@ -27,7 +27,6 @@ Este é o primeiro projeto utilizando a plataforma Godot. O objetivo é explorar
 
 - **Godot Engine** - [Baixe aqui](https://godotengine.org/download)
 - Versão recomendada: 3.5 ou superior
-- [Outras dependências específicas, se houver]
 
 ### Passos de Instalação
 
