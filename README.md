@@ -32,7 +32,7 @@ Este é o primeiro projeto utilizando a plataforma Godot. O objetivo é explorar
 
 1. Clone este repositório:
     ```bash
-    git clone https://github.com/seu-usuario/nome-do-projeto.git
+    git clone https://github.com/GabrieldotMasterson/jogos-de-sorte-godot.git
     ```
 
 2. Abra o projeto no Godot:
